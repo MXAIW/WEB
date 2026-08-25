@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction to HTML</title>
+</head>
+<body>
+	<details>
+		<summary>Типы (уровни) заголовков</summary>
+		<h1>Заголовок первого уровня на странице может быть только ОДИН</h1>
+		<h1>Introduction to HTML</h1>
+		<h2>Introduction to HTML</h2>
+		<h3>Introduction to HTML</h3>
+		<h4>Introduction to HTML</h4>
+		<h5>Introduction to HTML</h5>
+		<h6>Introduction to HTML</h6>
+	</details>
+
+	<details>
+		<summary>Дескрипторы физического форматирования</summary>
+		<p><b><i><u>Paragraph</u></i></b> — описывает абзац текста</p>
+		<b><code>&#x003c;p&#x003e;</code></b> (Paragraph) &#8213; описывает абзац; <br>
+		<b><code>&#x003c;b&#x003e;</code></b> (<b>Bold</b>) &#8213; делает текст <b>жирным</b>; <br>
+		<b><code>&#x003c;i&#x003e;</code></b> (<i>Italic</i>) &#8213; делает текст <i>курсивным</i>; <br>
+		<b><code>&#x003c;u&#x003e;</code></b> (<code>Underline</code>) &#8213; делает текст <u>подчёркнутым</u>;<br>
+		<b><code>&#x003c;tt&#x003e;</code></b> (<code>TeleType</code>) &#8213; делает текст <tt>моноширным или монохромный</tt> <b>(DEPRECATED)</b>; <br>
+		<b><code>&#x003c;sub&#x003e;</code></b> (<code>Subscript</code>) &#8213; <sub>нижний</sub> индекс; <br>
+		<b><code>&#x003c;sup&#x003e;</code></b> (<code>Superscript</code>) &#8213; <sup>верхний</sup> индекс; <br>
+		<b><code>&#x003c;pre&#x003e;</code></b> (<code>Preformator</code>) &#8213; <pre>создваёт предформатированный фрагмент текста, 
+					с учётом всех переносов и табуляторов.
+					кроме того, делает шрифт моноширным.</pre>; <br>
+	</details>
+
+	<details open>
+		<summary>Дескрипторы логического форматирования (<abbr>LFD</abbr> &#8213; Logical Formating Descriptors)</summary>
+		<p>Большинство дескрипторы логического форматирования заменяют дескрипторы физического форматирования. На сегодняшний день лучше использовать дескрипторы ЛОГИЧЕСКОГО форматирования, поскольку они лучше анализируются поисковыми машинами (Google, Yandex, ...)</p>
+		<h3>К LFD относятся:</h3>
+		<!--&#x03c;strong&#x03E;-->
+		<b><code>&#60;strong&#62;</code></b> &#8213; делает шрифт <strong>жирным</strong>;<br>
+		<b><code>&#60;em&#62;</code> (Emphasize) </b> &#8213; делает шрифт <em>курсивным</em>;<br>
+		<b><code>&#60;code&#62;</code></b> &#8213; делает шрифт <code>моноширным</code>;<br>
+		<b><code>&#60;cite&#62;</code></b> &#8213; предназначен для выделение <cite>цитат</cite>;<br>
+		<b><code>&#60;abbr&#62;</code> (Abbreviation)</b> &#8213; предназначен для выделение <abbr>аббреватур или сокращений</abbr>;<br>
+		<b><code>&#60;del&#62;</code> (Delete)</b> &#8213; предназначен для выделение <del>удалённой информации</del>;<br>
+	</details>
+</body>
+</html>
