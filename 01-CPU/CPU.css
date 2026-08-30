@@ -36,3 +36,19 @@ figcaption {
 	/*padding-left: 32px;*/
 	/*padding: 32px; Такой padding принимается со всех сторон*/
 }
+dl
+{
+	color:gray;
+	font-weight:200;
+}
+dt
+{
+	float:left;/*Обтекание текста*/
+	font-weight:bold;
+	width:128px;
+}
+dd:before
+{
+	margin-left:32px;
+	border:solid 0px;
+}
