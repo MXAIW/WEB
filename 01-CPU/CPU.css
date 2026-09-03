@@ -1,13 +1,15 @@
 ﻿/*CSS - Cascade Style Sheet (Каскадные таблицы стилей)*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-body {
+body 
+{
 	padding:0px 48px;
 	font-size: 24px;
 	font-family: Roboto Condensed;
 	/*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ 
 }
 
-p {
+p 
+{
 	text-align: justify;
 }
 p:first-letter
@@ -18,15 +20,18 @@ p:first-letter
 	/*font-style:italic;*/
 }
 
-figure {
+figure 
+{
 	text-align: center;
 }
 
-figcaption {
+figcaption 
+{
 	font-style: italic;
 	font-weight: 300;
 }
-.citation {
+.citation 
+{
 	border-left: solid 4px #1919a5;
 	margin: 32px 0 32px 32px;
 	padding-left:32px;
@@ -47,8 +52,65 @@ dt
 	font-weight:bold;
 	width:128px;
 }
-dd:before
+dd
 {
 	margin-left:32px;
 	border:solid 0px;
+}
+/*-------------------------------------*/
+table
+{
+	border-collapse:collapse;
+	width:80%;
+	margin: 0px auto;
+}
+table, thead 
+{
+	border: solid 3px;
+}
+th, td
+{
+	border:solid 1px;
+}
+thead th
+{
+	background-color:blue;
+	color:aliceblue;
+	padding:16px;
+}
+td
+{
+	text-align:center;
+}
+tbody th
+{
+	text-align:left;
+	background-color:lightgray;
+}
+table:hover
+{
+	box-shadow: 0px 0px 32px 16px gray;
+}
+tr:hover 
+{
+	box-shadow: inset 0px 0px 5px 2px blue;
+	/*
+	inset - тип тени
+	0px - Смещение тени по X
+	0px - Смешение тени по Y
+	16px - Blur, показывает на какой расстоянии тень сольётся с фоном и уйдёт в 0
+	0px - Spread, показывает на сколько тень расширяется по сравнение с объектом её отбрасывающим
+	blue; - цвет
+
+	*/
+}
+/*---------------------------*/
+a:hover
+{
+	font-weight:800;
+}
+a:active
+{
+	background-color:black;
+	color:white;
 }

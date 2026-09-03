@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Shadows</title>
+	<style>
+		body
+		{
+			display:flex;
+		}
+		.shadow-box-1, .shadow-box-2 
+		{
+			width: 256px;
+			height: 256px;
+			border: solid 1px;
+			margin: 200px auto;
+		}
+		.shadow-box-1 
+		{
+			box-shadow: -150px 50px 50px 0px green, 
+						150px 50px 50px 0px blue, 
+						50px -150px 50px 0px red;
+		}
+		.shadow-box-1 ~ .shadow-box-2
+		{
+			box-shadow:inset 50px 50px 50px 0px red,inset -50px -50px 50px 0px green;
+		}
+		.shadow-box-1  .shadow-box-2
+		{
+			width: 64px;
+			height: 64px;
+			margin: 50px auto;
+			box-shadow: inset 5px 5px 15px 5px red,inset -5px -5px 15px 5px green;
+		}
+
+    </style>
+</head>
+<body>
+	<h1>Shadows</h1>
+	<div class="shadow-box-2"></div>
+	<div class="shadow-box-1">
+		<div>
+			<div class="shadow-box-2"></div>
+		</div>
+	</div>
+	<div class="shadow-box-2"></div>
+</body>
+</html>
