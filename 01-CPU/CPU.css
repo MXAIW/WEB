@@ -1,97 +1,115 @@
 ﻿/*CSS - Cascade Style Sheet (Каскадные таблицы стилей)*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-body 
+
+body
 {
-	padding:0px 48px;
+	padding: 0px 48px;
 	font-size: 24px;
 	font-family: Roboto Condensed;
-	/*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ 
+	/*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+	/*background-color: blue;*/
+	background-image: linear-gradient(150deg, lightskyblue, pink);
+	/*background-image: linear-gradient(to bottom right, blue, red);*/
+	/*background-repeat: no-repeat;*/
+	background-attachment:fixed;
 }
 
-p 
+p
 {
 	text-align: justify;
 }
+
 p:first-letter
 {
-	margin-left:85px;
-	font-family: "Segoe Script"
+	margin-left: 85px;
+	font-family: "Segoe Script" ;
 	font-size:32px;
 	/*font-style:italic;*/
 }
 
-figure 
+figure
 {
 	text-align: center;
 }
 
-figcaption 
+figcaption
 {
 	font-style: italic;
 	font-weight: 300;
 }
-.citation 
+
+.citation
 {
 	border-left: solid 4px #1919a5;
 	margin: 32px 0 32px 32px;
-	padding-left:32px;
+	padding-left: 32px;
 	/*padding: 0 32px; - вверх/вниз, 32 - лево/право*/
 	/*padding: 0px 32px 64px; 0 - вверх, 32 - лево/право, 64 - низ*/
 	/*padding: 0px 32px 64px 128px; 0 - верх 32 - право, 64 - низ, 128 - лево, по часовой стрелке*/
 	/*padding-left: 32px;*/
 	/*padding: 32px; Такой padding принимается со всех сторон*/
 }
+
 dl
 {
-	color:gray;
-	font-weight:200;
+	color: gray;
+	font-weight: 200;
 }
+
 dt
 {
-	float:left;/*Обтекание текста*/
-	font-weight:bold;
-	width:128px;
+	float: left; /*Обтекание текста*/
+	font-weight: bold;
+	width: 128px;
 }
+
 dd
 {
-	margin-left:32px;
-	border:solid 0px;
+	margin-left: 32px;
+	border: solid 0px;
 }
 /*-------------------------------------*/
 table
 {
-	border-collapse:collapse;
-	width:80%;
+	border-collapse: collapse;
+	width: 80%;
 	margin: 0px auto;
 }
-table, thead 
+
+table, thead
 {
 	border: solid 3px;
 }
+
 th, td
 {
-	border:solid 1px;
+	border: solid 1px;
 }
+
 thead th
 {
-	background-color:blue;
-	color:aliceblue;
-	padding:16px;
+	background-color: blue;
+	color: aliceblue;
+	padding: 16px;
 }
+
 td
 {
-	text-align:center;
+	text-align: center;
 }
+
 tbody th
 {
-	text-align:left;
-	background-color:lightgray;
+	text-align: left;
+	background-color: lightgray;
 }
+
 table:hover
 {
 	box-shadow: 0px 0px 32px 16px gray;
 }
-tr:hover 
+
+tr:hover
 {
 	box-shadow: inset 0px 0px 5px 2px blue;
 	/*
@@ -104,13 +122,27 @@ tr:hover
 
 	*/
 }
+
+.generation
+{
+	text-align: right;
+}
+.cpumodel
+{
+	text-align:left;
+}
+.generation, .generation-header, .cpumodel, .cpumodel-header
+{
+	width:128px;
+}
 /*---------------------------*/
 a:hover
 {
-	font-weight:800;
+	font-weight: 800;
 }
+
 a:active
 {
-	background-color:black;
-	color:white;
+	background-color: black;
+	color: white;
 }

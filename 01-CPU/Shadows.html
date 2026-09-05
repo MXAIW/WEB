@@ -7,7 +7,10 @@
 	<style>
 		body
 		{
-			display:flex;
+			display: flex;
+			/*background-image: radial-gradient(circle, red 20%, green 40%, blue);*/
+			background-image: conic-gradient(from 90deg at 60% 10%, red, green, blue, red);
+			background-attachment: fixed;
 		}
 		.shadow-box-1, .shadow-box-2 
 		{
@@ -21,6 +24,15 @@
 			box-shadow: -150px 50px 50px 0px green, 
 						150px 50px 50px 0px blue, 
 						50px -150px 50px 0px red;
+		}
+		.shadow-box-2
+		{
+			border: solid 3px darkblue;
+			border-radius: 128px;
+			box-shadow: 0px 0px 0px 32px white;
+			background-image: /*radial-gradient(while 50%, blue 55%, white 60%, blue 75%, whie 80%), */
+			conic-gradient(white 0deg, white 90deg, darkblue 90deg, darkblue 180deg, white 180deg, white 270deg, darkblue 270deg, darkblue 360deg);
+			/*background-image: conic-gradient(red, green, blue, red);*/
 		}
 		.shadow-box-1 ~ .shadow-box-2
 		{
