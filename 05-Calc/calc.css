@@ -5,7 +5,6 @@
 }
 .main-window
 {
-	border:solid 1px;
 	width:400px;
 	height:300px;
 }
@@ -13,18 +12,21 @@
 {
 	height: 38px;
 	background-color: blue;
-	color:white;
+	color: white;
+	font-family: Tahoma;
+	display: flex;
+	justify-content: space-between; /*Выравнивание по горизонтали*/
+	align-items: center; /*Выравнивание по вертикали*/
 
-	font-family:Tahoma;
-
-	display:flex;
-	justify-content:space-between; /*Выравнивание по горизонтали*/
-	align-items:center; /*Выравнивание по вертикали*/
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-image: linear-gradient(to bottom, rgb(50, 140, 250), rgb(50, 140, 250), rgb(3, 92, 230), rgb(3, 92, 230), rgb(3, 92, 230), rgb(3, 92, 230), rgb(4, 107, 255), rgb(4, 107, 255), rgb(4, 107, 255), rgb(4, 107, 255));
+	box-shadow:inset 1px 0px 8px 0px darkblue;
 }
 .iconsm
 {
-	width:32px;
-	height:32px;
+	width:28px;
+	height:28px;
 }
 .icon-and-title
 {
