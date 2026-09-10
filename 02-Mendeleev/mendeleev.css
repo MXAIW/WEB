@@ -1,0 +1,91 @@
+body
+{
+	padding: 0px 48px;
+	font-size: 24px;
+	font-family: Roboto Condensed;
+	background-image: linear-gradient(150deg, lightskyblue, pink);
+	background-attachment: fixed;
+}
+
+p
+{
+	text-align: justify;
+}
+
+figure
+{
+	text-align: center;
+}
+
+figcaption
+{
+	font-style: italic;
+	font-weight: 300;
+}
+
+.citation
+{
+	border-left: solid 4px #1919a5;
+	margin: 32px 0 32px 32px;
+	padding-left: 32px;
+	/*padding: 0 32px; - вверх/вниз, 32 - лево/право*/
+	/*padding: 0px 32px 64px; 0 - вверх, 32 - лево/право, 64 - низ*/
+	/*padding: 0px 32px 64px 128px; 0 - верх 32 - право, 64 - низ, 128 - лево, по часовой стрелке*/
+	/*padding-left: 32px;*/
+	/*padding: 32px; “акой padding принимаетс€ со всех сторон*/
+}
+/*-------------------------------------*/
+table
+{
+	border-collapse: collapse;
+	width: 95%;
+	margin: 0px auto;
+}
+
+table, thead
+{
+	border: solid 3px;
+}
+
+th, td
+{
+	border: solid 1px;
+	text-align: left;
+	background-color: lightgray;
+}
+
+thead
+{
+	background-color: lightgray;
+	color: black;
+}
+
+td
+{
+	text-align: center;
+}
+
+tr:hover
+{
+	box-shadow: inset 0px 0px 5px 2px blue;
+}
+.firstLine, none
+{
+	text-align: center;
+	background-color: lightgray;
+}
+.firstColumn
+{
+	width: 1px;
+}
+/*---------------------------*/
+a:hover
+{
+	font-weight: 800;
+}
+
+a:active
+{
+	background-color: black;
+	color: white;
+}
