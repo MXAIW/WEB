@@ -21,7 +21,7 @@
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	background-image: linear-gradient(to bottom, rgb(50, 140, 250), rgb(50, 140, 250), rgb(3, 92, 230), rgb(3, 92, 230), rgb(3, 92, 230), rgb(3, 92, 230), rgb(4, 107, 255), rgb(4, 107, 255), rgb(4, 107, 255), rgb(4, 107, 255));
-	box-shadow:inset 1px 0px 8px 0px darkblue;
+	box-shadow:inset -2px 0px 8px 0px darkblue;
 }
 .iconsm
 {
