@@ -47,21 +47,59 @@
 }
 .control-buttons
 {
-	height:32px;
-	width:32px;
+	height:28px;
+	width:28px;
 	font-size: 24px;
 	padding-left:5px;
 	padding-right:5px;
 	margin: 0px 1px;
+
+	border:solid 1px;
+	border-radius:4px;
+
+	background-color: rgb(40, 105, 250);
+	color:white;
+
+	box-shadow:inset 3px 2px 8px 0px #55AAFF ,inset -2px -1px 5px 0px #0000BB;
+}
+.control-button:hover
+{
+	background-image: linear-gradient(to bottom right, 
+						rgb(190, 190, 250), 
+						rgb(40, 105, 250), 
+						rgb(150, 150, 250)
+	);
+}
+.control-button[disabled], .control-button[disable]:hover
+{
+	color:#CCCCEE;
+	background-image:none;
+	background-color:rgb(40,105,250);
+	box-shadow: inset 3px 1px 7px 0px #2288FF;
+}
+.control-button:active
+{
+	background-image: none;
+	background-color:rgb(50, 50, 200);
+	box-shadow:inset -3px 1px 7px 0px #2288FF, inset 4px 2px 5px 0px #000088;
+}
+.close-button
+{
+	background-color:rgb(220, 77, 57);
+	box-shadow:inset 2px 1px 8px 0px #FFBBBB, inset -2px -1px 5px 0px #770000;
+}
+.close-buttom:hover
+{
+	background-image:linear-gradient(to bottom right, rgb(220, 177, 157), rgb(255, 77, 57), rgb(220, 177, 157));
 }
 .control-button-signature
 {
-	margin-top:-5px;
-	margin-left:-5px;
+	margin-top:-6px;
+	margin-left:-4px;
 }
 .close-button-signature
 {
-	margin:-3px 0 0 -1px;
+	margin:-3px 0 0 -2px;
 }
 .client-rect
 {
