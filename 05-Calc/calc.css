@@ -155,3 +155,28 @@
 	background-color: #DAD8D8;
 	box-shadow: -1px -1px 0px 0px gray;
 }
+
+/***			Display:			***/
+.display-container
+{
+	padding:8px;
+}
+.display-container > input
+{
+	width:98%;
+}
+
+/***			Buttons:			***/
+.buttons-container
+{
+	padding:8px;
+	display:grid;
+	grid-template-rows:repeat(5, auto);
+	grid-template-columns:repeat(6, auto);
+}
+.clear-buttons
+{
+	grid-row:1;
+	grid-column-start:2;
+	grid-column-end:7;
+}
