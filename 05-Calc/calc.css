@@ -173,10 +173,33 @@
 	display:grid;
 	grid-template-rows:repeat(5, auto);
 	grid-template-columns:repeat(6, auto);
+	grid-row-gap: 8px;
+	grid-column-gap:5px;
+}
+.square
+{
+	width:26px;
+	height:26px;
+	border:inset 2px;
+	margin-left: 4px;
+	margin:auto auto;
 }
 .clear-buttons
 {
 	grid-row:1;
 	grid-column-start:2;
 	grid-column-end:7;
+
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.clear-buttons > button
+{
+	width: 32%;
+	height:100%;
+}
+.buttons-container > button
+{
+	width:33px;
 }
