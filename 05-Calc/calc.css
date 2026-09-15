@@ -1,13 +1,15 @@
-﻿body
+﻿﻿body
 {
-	background-image:url("img/bliss.jpg");
-	background-size:cover;
+	background-image: url("img/bliss.jpg");
+	background-size: cover;
 }
+
 .main-window
 {
-	width:400px;
-	height:300px;
+	width: 400px;
+	height: 300px;
 }
+
 .title-bar
 {
 	height: 38px;
@@ -21,89 +23,102 @@
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	background-image: linear-gradient(to bottom, rgb(50, 140, 250), rgb(50, 140, 250), rgb(3, 92, 230), rgb(3, 92, 230), rgb(3, 92, 230), rgb(3, 92, 230), rgb(4, 107, 255), rgb(4, 107, 255), rgb(4, 107, 255), rgb(4, 107, 255));
-	box-shadow:inset -2px 0px 8px 0px darkblue;
+	box-shadow: inset -2px 0px 8px 0px darkblue;
 }
+
 .iconsm
 {
-	width:28px;
-	height:28px;
+	width: 28px;
+	height: 28px;
 }
+
 .icon-and-title
 {
-	display:flex;
-	align-items:center;
+	display: flex;
+	align-items: center;
 }
+
 .title-bar-window-control-buttons
 {
 	padding: 0px 5px;
 	/*width: 100px;*/
-	padding:1px;
+	padding: 1px;
 }
+
 .title-bar-window-control-buttons, .control-buttons
 {
 	display: flex;
 	align-items: center;
-	align-content:center;
+	align-content: center;
 }
+
 .control-buttons
 {
-	height:28px;
-	width:28px;
+	height: 28px;
+	width: 28px;
 	font-size: 24px;
-	padding-left:5px;
-	padding-right:5px;
+	padding-left: 5px;
+	padding-right: 5px;
 	margin: 0px 1px;
-
-	border:solid 1px;
-	border-radius:4px;
-
+	border: solid 1px;
+	border-radius: 4px;
 	background-color: rgb(40, 105, 250);
-	color:white;
+	color: white;
+	box-shadow: inset 3px 2px 8px 0px #55AAFF,inset -2px -1px 5px 0px #0000BB;
+}
 
-	box-shadow:inset 3px 2px 8px 0px #55AAFF ,inset -2px -1px 5px 0px #0000BB;
-}
-.control-button:hover
+.control-buttons:hover
 {
-	background-image: linear-gradient(to bottom right, 
-						rgb(190, 190, 250), 
-						rgb(40, 105, 250), 
-						rgb(150, 150, 250)
-	);
+	background-image: linear-gradient(to bottom right, rgb(190, 190, 250), rgb(40, 105, 250), rgb(150, 150, 250) );
 }
-.control-button[disabled], .control-button[disable]:hover
+
+.control-buttons[disabled], .control-buttons[disable]:hover, .control-buttons[disable]:active
 {
-	color:#CCCCEE;
-	background-image:none;
-	background-color:rgb(40,105,250);
+	color: #CCCCEE;
+	background-image: none;
+	background-color: rgb(40,105,250);
 	box-shadow: inset 3px 1px 7px 0px #2288FF;
 }
-.control-button:active
+
+.control-buttons:active
 {
 	background-image: none;
-	background-color:rgb(50, 50, 200);
-	box-shadow:inset -3px 1px 7px 0px #2288FF, inset 4px 2px 5px 0px #000088;
+	background-color: rgb(50, 50, 200);
+	box-shadow: inset -3px 1px 7px 0px #2288FF, inset 4px 2px 5px 0px #000088;
 }
+
 .close-button
 {
-	background-color:rgb(220, 77, 57);
-	box-shadow:inset 2px 1px 8px 0px #FFBBBB, inset -2px -1px 5px 0px #770000;
+	background-color: rgb(220, 77, 57);
+	box-shadow: inset 2px 1px 8px 0px #FFBBBB, inset -2px -1px 5px 0px #770000;
 }
-.close-buttom:hover
+
+.close-button:hover
 {
-	background-image:linear-gradient(to bottom right, rgb(220, 177, 157), rgb(255, 77, 57), rgb(220, 177, 157));
+	background-image: linear-gradient(to bottom right, rgb(220, 177, 157), rgb(255, 77, 57), rgb(220, 177, 157));
 }
+
+.close-button:active
+{
+	background-image: none;
+	background-color: rgb(220, 77, 57);
+	box-shadow: inset -2px -1px 8px 0px #FF8888, inset 2px 1px 8px 0px #770000;
+}
+
 .control-button-signature
 {
-	margin-top:-6px;
-	margin-left:-4px;
+	margin-top: -6px;
+	margin-left: -4px;
 }
+
 .close-button-signature
 {
-	margin:-3px 0 0 -2px;
+	margin: -3px 0 0 -2px;
 }
+
 .client-rect
 {
 	/*background-color:rgb(235, 233, 216)*/
-	background-color:#EAE8D8;
-	height:262px;
+	background-color: #EAE8D8;
+	height: 262px;
 }
