@@ -3,15 +3,26 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+	<link  rel="events.css" href="events.css" />
     <title></title>
 </head>
 <body>
 	<h1>Events</h1>
 	<div class="factorial">
+		<h2>Factorial</h2>
 		<input type="number" id="factorial-source">
-		<button onclick="factorial()">Calculate</button>
-		<div id="factorial-result"></div>
+		<!--<button onclick="factorial()">Calculate</button>-->
+		<input type="button" value="Calculate" onclick="factorial()">
+		<span id="factorial-result"></span>
 	</div>
+
+	<div id="power-container" class="task">
+		<h2>Power</h2>
+		<input type="number" placeholder="Основание степени" id="base" onchange="power()">
+		<input type="number" placeholder="Показатель степени" id="exponent" onchange="power()" value="0">
+		<span id="power"></span>
+	</div>
+
 	<script src="events.js"></script>
 </body>
 </html>

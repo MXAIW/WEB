@@ -8,5 +8,11 @@ function factorial()
 	{
 		f *= i;
 	}
-	document.getElementById("factorial-result").innerHTML = `<h2>${n}! = ${f}<h2>`;
+	document.getElementById("factorial-result").innerHTML = `${n}! = ${f}`;
+}
+function power()
+{
+	let base = document.getElementById('base').value;
+	let exp = document.getElementById('exponent').value;
+	document.getElementById('power').innerHTML = `${base}<sup>${exp}</sup>=${base**exp}`;
 }
