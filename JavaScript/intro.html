@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javaScript</title>
+</head>
+<body>
+	<details>
+		<summary>Введение</summary>	
+		<h1>javaScript</h1>
+		Интерпретируемый
+		Интерпретатор - это программа, которая выполоняет другие программы
+		<hr>
+		<h2>Переменные</h2>
+		<p>
+			переменную можно обьявить при помощи ключевого слова var, let либо же const.
+		</p>
+		<dl>
+			<dt><code>var</code></dt>
+			<dd>Объявялет глобальную переменную, независимо от области видимости, в которой она объявлена;</dd>
+
+			<dt><code>let</code></dt>
+			<dd>Объявляет локальную переменную, такакя переменная существует только в той области видимости, в которой она объявляется;</dd>
+
+			<dt><code>const</code></dt>
+			<dd>Объявляет локальную константу;</dd>
+		</dl>
+		<h2>Примечание: переменная неявна объявляется при использлованиию То есть если использовать необъявленную переменную, интрепетатор сам неявно её объявит</h2>
+	</details>
+    <script>
+        //{
+        //    var name = prompt("Введите Ваше имя:");
+        //}
+  //      document.writeln("Привет, " + name + '<br>');
+  //      document.writeln('Привет, ' + name + "<br>");
+		//document.writeln(`<h2>Привет, ${name}<h2>`); // Интерполяция строк
+
+		let number = prompt("Введите Число для вычисления факториала:");
+		document.writeln(`<h1> ${typeof(number)} </h1>`);
+		document.writeln(`<h1> ${number + 4} </h1>`);
+		document.writeln(`<h1> ${number - 4} </h1>`);
+		document.writeln(`<h1> ${number * 4} </h1>`);
+		let n = Number(number);
+		let f = BigInt(1);
+		document.writeln(`<h1> ${typeof (f)} </h1>`);
+		for (let i = 1n; i <= n; i++)
+		{
+			f *= i;
+			document.writeln(`<h1>${i} ! = ${f}</h1>`);
+		}
+
+    </script>
+</body>
+</html>
