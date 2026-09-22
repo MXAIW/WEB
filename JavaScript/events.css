@@ -7,7 +7,44 @@
 {
 	display:flex;
 	justify-content:space-between;
+	align-items:center;
 	border-bottom: solid 1px;
+}
+
+.header > h3, .header > h5
+{
+	margin:16px;
+}
+
+#switch-background
+{
+	width: 32px;
+	height: 32px;
+	background-size: 32px 32px;
+	margin:16px;
+}
+
+.dark
+{
+	background-color:#323232;
+	color:white;
+}
+
+.dark #switch-background
+{
+	background-image:url('sun.png');
+	filter:brightness(0) invert(1);
+}
+
+.ligth
+{
+	background-color:white;
+	color: black;
+}
+
+.ligth #switch-background
+{
+	background-image:url('moon.png');
 }
 
 .factorial
