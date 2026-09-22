@@ -1,24 +1,54 @@
-﻿body, input
+﻿﻿body, input
 {
-	font-size:22px;
+	font-size: 32px;
 }
-.factorial
+
+.header
 {
 	display:flex;
-	justify-content:flex-start;
+	justify-content:space-between;
+	border-bottom: solid 1px;
 }
+
+.factorial
+{
+	display: flex;
+	justify-content: flex-start;
+}
+
 #factorial-result
 {
-	margin-left:8px;
+	margin-left: 8px;
 }
+
 .task
 {
-	margin:16px;
-	padding:8px;
-	border-radius:8px;
+	margin: 32px;
+	padding: 16px;
+	border-radius: 8px;
 	box-shadow: 0px 0px 16px 0px gray;
 }
+
 .task > h2
 {
-	margin:0
+	margin: 0;
+}
+/*///////////////////////*/
+.images-and-colors, .colors
+{
+	display:flex;
+	justify-content:space-between;
+}
+.photo-container > .image-container, img
+{
+	width: 300px;
+	height: 350px;
+}
+.photo-container > .image-container
+{
+	border:solid 1px;
+}
+input[type=color]
+{
+	margin-right:32px;
 }
