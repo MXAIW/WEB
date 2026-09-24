@@ -70,3 +70,32 @@ function setDelay(e)
 	let delay = e.target.value;
 	document.body.style.transition = document.getElementById("switch-background").transition = `color ${delay}s, background-color ${delay}s, background-image ${delay}s`;
 }
+
+////////////////////////////////////
+function addLeadingZero(number)
+{
+	return number < 10 ? `0${number}` : `${number}`;
+}
+
+tick_timer();
+function tick_timer()
+{
+	let time = new Date();
+	document.getElementById("full-time").innerHTML = time.toString();
+
+	document.getElementById("hours").innerHTML = addLeadingZero(time.getHours());
+	document.getElementById("minutes").innerHTML = addLeadingZero(time.getMinutes());
+	document.getElementById("seconds").innerHTML = addLeadingZero(time.getSeconds());
+
+	document.getElementById("years").innerHTML = addLeadingZero(time.getFullYear());
+	document.getElementById("months").innerHTML = addLeadingZero(time.getMonth() + 1);
+	document.getElementById("days").innerHTML = addLeadingZero(time.getDate());
+
+	document.getElementById("weekday").innerHTML = time.toLocaleDateString("ru", { weekday: 'long' });
+
+	document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? "visible" : "hidden";
+	document.getElementById("weekday").style.visibility = document.getElementById("show-weekday").checked ? "visible" : "hidden";
+
+
+	setTimeout(tick_timer, 100);
+}

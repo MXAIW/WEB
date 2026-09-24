@@ -43,24 +43,50 @@
 			</div>
 	</details>
 
-	<div class="images-and-colors">
-		<div class="photo-container">
-			<div class="image-container">
-				<img src="" alt="Фото студента" id="image">
+	<details>
+		<summary>Цвета и картинки</summary>
+		<div class="images-and-colors">
+			<div class="photo-container">
+				<div class="image-container">
+					<img src="" alt="Фото студента" id="image">
+				</div>
+				<input type="file" id="image-file" onchange="setImage()">
 			</div>
-			<input type="file" id="image-file" onchange="setImage()">
+
+			<div class="colors">
+				<div>
+					<label for="background-color">Цвет фона</label>
+					<input type="color" id="background-color" oninput="setColor(event)" />
+				</div>
+				<div>
+					<label for="foreground-color">Цвет текста</label>
+					<input type="color" id="foreground-color" oninput="setColor(event)">
+				</div>
+			</div>
+		</div>
+	</details>
+
+	<h2>Дата и время</h2>
+	<h3 id="full-time"></h3>
+
+	<div id="clock">
+		<div id="current-time">
+			<span id="hours"></span> :
+			<span id="minutes"></span> :
+			<span id="seconds"></span>
+		</div>
+		<div id="current-date">
+			<span id="years"></span> .
+			<span id="months"></span> .
+			<span id="days"></span>
 		</div>
 
-		<div class="colors">
-			<div>
-				<label for="background-color">Цвет фона</label>
-				<input type="color" id="background-color" oninput="setColor(event)"/>
-			</div>
-			<div>
-				<label for="foreground-color">Цвет текста</label>
-				<input type="color" id="foreground-color" oninput="setColor(event)">
-			</div>
+		<div id="weekday"></div>
+		<div id="clock-controls">
+			<input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+			<input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
 		</div>
+
 	</div>
 
 	<script src="events.js"></script>
