@@ -1,4 +1,10 @@
-﻿﻿body, input
+﻿@font-face
+{
+	font-family: Digital-7 Mono;
+	src: url('digital-7 (mono).ttf')
+}
+
+﻿body, input
 {
 	font-size: 32px;
 }
@@ -110,6 +116,7 @@ input[type=color]
 /*-----------Time---------------*/
 #clock
 {
+	font-family:'Digital-7 Mono';
 	text-align: center;
 	font-size: 48px;
 }
