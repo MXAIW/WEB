@@ -14,7 +14,7 @@ function power()
 {
 	let base = document.getElementById('base').value;
 	let exp = document.getElementById('exponent').value;
-	document.getElementById('power').innerHTML = `${base}<sup>${exp}</sup>=${base**exp}`;
+	document.getElementById('power').innerHTML = `${base}<sup>${exp}</sup>=${base ** exp}`;
 }
 function fibonacci()
 {
@@ -135,7 +135,7 @@ function tickCountdown()
 	targetTime.setDate(targetDate.getDate());
 
 	//Определяем разницу во времени
-	let timestamp = targetTime - now;
+	let timestamp = Math.abs(targetTime - now);
 	let duration = Math.trunc(timestamp / 1000);
 
 	document.getElementById("target-date-value").innerHTML = targetDate;
@@ -157,10 +157,12 @@ function tickCountdown()
 
 	let hours_block = document.getElementById("hours-unit").parentElement;
 	let years = Math.trunc(date / SECONDS_PER_YEAR);
-	if (years > 0) {
+	if (years > 0)
+	{
 		date = date % SECONDS_PER_YEAR;
 		let years_unit = document.getElementById("years-unit");
-		if (years_unit == null) {
+		if (years_unit == null)
+		{
 			let years_block = createTimeBlock("years", years);
 			hours_block.before(years_block);
 		}
@@ -177,7 +179,7 @@ function tickCountdown()
 		if (months_unit == null)
 		{
 			let months_block = createTimeBlock("months", months);
-			hours_block.before(months);
+			hours_block.before(months_block);
 		}
 		else
 			months_unit.innerHTML = addLeadingZero(months);
@@ -213,25 +215,31 @@ function tickCountdown()
 	document.getElementById("minutes-unit").innerHTML = addLeadingZero(Math.trunc(time_of_day / SECONDS_PER_MINUTE));
 	document.getElementById("seconds-unit").innerHTML = addLeadingZero(time_of_day % SECONDS_PER_MINUTE);
 
+	if (duration === 0)
+	{
+		let player = document.getElementById("player");
+		player.play();
+	}
+
 	setTimeout(tickCountdown, 100);
 }
 function createTimeBlock(name, value)
 {
 	let time_block = document.createElement("div");
-	time_block.className = "time_block";
+	time_block.className = "time-block";
 
 	let unit = document.createElement("div");
 	unit.id = `${name}-unit`;
 	unit.className = "time-unit";
 	unit.innerHTML = addLeadingZero(value);
 
-	let market = document.createElement("div");
-	market.id = `${name}-market`;
-	market.className = "time-market";
-	market.innerHTML = name;
+	let marker = document.createElement("div");
+	marker.id = `${name}-marker`;
+	marker.className = "time-marker";
+	marker.innerHTML = name;
 
 	time_block.prepend(unit);
-	time_block.append(market);
+	time_block.append(marker);
 	return time_block;
 }
 function removeTimeBlock(name)
