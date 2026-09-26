@@ -21,26 +21,26 @@
 
 	<details>
 		<summary>Простейшие задачи</summary>
-			<div id="factorial-container" class="task">
-				<h2>Factorial</h2>
-				<input type="number" id="factorial-source">
-				<!--<button onclick="factorial()">Calculate</button>-->
-				<input type="button" value="Calculate" onclick="factorial()">
-				<span id="factorial-result"></span>
-			</div>
+		<div id="factorial-container" class="task">
+			<h2>Factorial</h2>
+			<input type="number" id="factorial-source">
+			<!--<button onclick="factorial()">Calculate</button>-->
+			<input type="button" value="Calculate" onclick="factorial()">
+			<span id="factorial-result"></span>
+		</div>
 
-			<div id="power-container" class="task">
-				<h2>Power</h2>
-				<input type="number" placeholder="Основание степени" id="base" onchange="power()">
-				<input type="number" placeholder="Показатель степени" id="exponent" onchange="power()" value="0">
-				<span id="power"></span>
-			</div>
+		<div id="power-container" class="task">
+			<h2>Power</h2>
+			<input type="number" placeholder="Основание степени" id="base" onchange="power()">
+			<input type="number" placeholder="Показатель степени" id="exponent" onchange="power()" value="0">
+			<span id="power"></span>
+		</div>
 
-			<div id="Fibonacci" class="task">
-				<h2>Fibonacci</h2>
-				<input type="number" placeholder="Предел" id="fibonacci-end" onchange="fibonacci()">
-				<span id="fibonacci-result"></span>
-			</div>
+		<div id="Fibonacci" class="task">
+			<h2>Fibonacci</h2>
+			<input type="number" placeholder="Предел" id="fibonacci-end" onchange="fibonacci()">
+			<span id="fibonacci-result"></span>
+		</div>
 	</details>
 
 	<details>
@@ -66,28 +66,61 @@
 		</div>
 	</details>
 
-	<h2>Дата и время</h2>
-	<h3 id="full-time"></h3>
+	<details>
+		<summary>Часы</summary>
+		<h2>Дата и время</h2>
+		<h3 id="full-time"></h3>
 
-	<div id="clock">
-		<div id="current-time">
-			<span id="hours"></span> :
-			<span id="minutes"></span> :
-			<span id="seconds"></span>
-		</div>
-		<div id="current-date">
-			<span id="years"></span> .
-			<span id="months"></span> .
-			<span id="days"></span>
-		</div>
+		<div id="clock">
+			<div id="current-time">
+				<span id="hours"></span> :
+				<span id="minutes"></span> :
+				<span id="seconds"></span>
+			</div>
+			<div id="current-date">
+				<span id="years"></span> .
+				<span id="months"></span> .
+				<span id="days"></span>
+			</div>
 
-		<div id="weekday"></div>
-		<div id="clock-controls">
-			<input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
-			<input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
-		</div>
+			<div id="weekday"></div>
+			<div id="clock-controls">
+				<input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+				<input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
+			</div>
 
+		</div>
+	</details>
+
+	<div id="countdown-timer">
+		<h2>Countdown timer</h2>
+		<input type="date" id="target-date" value="2026-09-26">
+		<input type="time" id="target-time" value="17:00"/>
+		<input type="button" id="btn-start" value="Start" />
 	</div>
+
+	<pre id="debug">
+	<label for="target-date-value">Target date:</label><span id="target-date-value"></span>
+	<label for="target-time-value">Target time:</label><span id="target-time-value"></span>
+	<label for="timestamp">Timestamp:</label><span id="timestamp"></span>
+	<label for="duration">Duration:</label><span id="duration"></span>
+	</pre>
+
+	<div id="display">
+		<div class="time-block">
+			<div id="hours-unit" class="time-unit"></div>
+			<div id="hours-market" class="time-market">Hours</div>
+		</div>
+		<div class="time-block">
+			<div id="minutes-unit" class="time-unit"></div>
+			<div id="minutes-market" class="time-market">Minutes</div>
+		</div>
+		<div class="time-block">
+			<div id="seconds-unit" class="time-unit"></div>
+			<div id="seconds-market" class="time-market">Seconds</div>
+		</div>
+	</div>
+
 
 	<script src="events.js"></script>
 </body>
