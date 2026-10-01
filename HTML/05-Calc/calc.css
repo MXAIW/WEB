@@ -1,11 +1,14 @@
-﻿﻿body
+﻿body
 {
 	background-image: url("img/bliss.jpg");
 	background-size: cover;
+	display: flex;
+	justify-content: center;
 }
 
 .main-window
 {
+	/*border:solid 1px;*/
 	width: 400px;
 	height: 350px;
 }
