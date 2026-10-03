@@ -20,26 +20,41 @@ console.log(digitButtons);
 
 for (let i = 0; i < digitButtons.length; i++)
 {
-	//digitButtons[i].addEventListener("click", inputDigit);
-	document.getElementById(`${i}`).addEventListener("click", inputDigit);
+	digitButtons[i].addEventListener("click", inputDigit);
+	//document.getElementById(`${i}`).addEventListener("click", inputDigit);
 }
-function inputDigit(event)
+function inputDigit()
 {
 	let display = document.getElementById("display");
-	if (display === '0') display.value = '';
+	if (display.value === '0') display.value = '';
 	display.value += this.innerHTML;
 	
 	console.log(this);
 }
 
-document.onkeypress = function (e)
+/*document.onkeypress = function (e)
 {
 	console.log(e.key);
-	if (e.key >= 0 && e.key <= 58)
+	if (e.key >= 0 && e.key <= 9)
 	{
 		//document.getElementById(`${e.key.charcode-48}`).
 		document.getElementById("display").value += e.key;
 		console.log("DIGIT");
 	}
 	console.log(e);
+}*/
+
+document.onkeydown = function (e)
+{
+	console.log(e.key);
+	let button = document.getElementById(`${e.key}`);
+	button.classList.add("button-active");
+
+	console.log(button);
+}
+document.onkeyup = function (e)
+{
+	let button = document.getElementById(`${e.key}`);
+	if (button.classList != null)
+		button.classList.remove("button-active");
 }
