@@ -25,11 +25,17 @@ for (let i = 0; i < digitButtons.length; i++)
 }
 function inputDigit()
 {
-	let display = document.getElementById("display");
+	/*let display = document.getElementById("display");
 	if (display.value === '0') display.value = '';
 	display.value += this.innerHTML;
-	
-	console.log(this);
+	console.log(this);*/
+	digit2display(this.innerHTML);
+}
+function digit2display(digit)
+{
+	let display = document.getElementById("display");
+	if (display.value === '0') display.value = '';
+	display.value += digit;
 }
 
 /*document.onkeypress = function (e)
@@ -57,4 +63,5 @@ document.onkeyup = function (e)
 	let button = document.getElementById(`${e.key}`);
 	if (button.classList != null)
 		button.classList.remove("button-active");
+	digit2display(e.key);
 }
