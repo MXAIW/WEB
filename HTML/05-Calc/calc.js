@@ -2,6 +2,13 @@
 let buttons = document.getElementsByTagName("button");
 console.log(buttons);
 //console.table(elemens);
+
+let a, b; // Операнды
+let s; //Sign - знак операции
+let input = false;
+let input_operation = false;
+
+
 let digitButtons = document.getElementsByClassName("digit-button");
 console.log(digitButtons);
 //for (let i = 1; i < digitButtons.length - 1; i++)
@@ -33,11 +40,18 @@ function inputDigit()
 }
 function digit2display(digit)
 {
+	if (input_operation = true)
+	{
+		document.getElementById("display").value = "0";
+		input_operation = false;
+	}
 	let display = document.getElementById("display");
 	if (digit == ' ') return;
 	if (display.value === '0') display.value = '';
 	if (digit == '.' && display.value.includes('.')) return;
 	display.value += digit;
+
+	input = true;
 }
 
 /*document.onkeypress = function (e)
@@ -71,6 +85,11 @@ document.onkeydown = function (e)
 		case "Backspace":
 			document.getElementById("Backspace").classList.add("button-active");
 			break;
+
+		case "+":
+		case "-":
+		case "*":
+		case "/":
 	}
 }
 document.onkeyup = function (e)
@@ -86,12 +105,37 @@ document.onkeyup = function (e)
 			document.getElementById("display").value = "0";
 			break;
 		case "Enter":
+			Calculate();
 			document.getElementById("=").classList.remove("button-active");
 			break;
 		case "Backspace":
 			Backspace()
 			// Мой вариант Backspace 
 			//document.getElementById("Backspace").classList.remove("button-active");
+			break;
+		case "+":
+			operation = e.key;
+			input = false;
+			input_operation = true;
+			a = Number(document.getElementById("display").value);
+			break;
+		case "-":
+			operation = e.key;
+			input = false;
+			input_operation = true;
+			a = Number(document.getElementById("display").value);
+			break;
+		case "*":
+			operation = e.key;
+			input = false;
+			input_operation = true;
+			a = Number(document.getElementById("display").value);
+			break;
+		case "/":
+			operation = e.key;
+			input = false;
+			input_operation = true;
+			a = Number(document.getElementById("display").value);
 			break;
 	}
 	if (e.key >= 0 && e.key <= 9 || e.key == '.')
@@ -125,4 +169,19 @@ function Backspace()
 		display.value = "0";
 	else
 		display.value = display.value.substring(0, display.value.length - 1);
+}
+function Calculate()
+{
+	if (input) b = Number(document.getElementById("display").value);
+	switch (operation)
+	{
+		case "+": a += b; break;
+		case "-": a -= b; break;
+		case "*": a *= b; break;
+		case "/": a /= b; break;
+	}
+	document.getElementById("display").value = a;
+	input = false;
+	input_operation = false;
+
 }
