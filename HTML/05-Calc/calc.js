@@ -36,7 +36,7 @@ function digit2display(digit)
 	let display = document.getElementById("display");
 	if (digit == ' ') return;
 	if (display.value === '0') display.value = '';
-	if (digit == '.' && digit.value.includes('.')) return;
+	if (digit == '.' && display.value.includes('.')) return;
 	display.value += digit;
 }
 
@@ -68,6 +68,9 @@ document.onkeydown = function (e)
 		case "Enter":
 			document.getElementById("=").classList.add("button-active");
 			break;
+		case "Backspace":
+			document.getElementById("Backspace").classList.add("button-active");
+			break;
 	}
 }
 document.onkeyup = function (e)
@@ -83,13 +86,43 @@ document.onkeyup = function (e)
 			document.getElementById("display").value = "0";
 			break;
 		case "Enter":
-			document.getElementById("=").classList.add("button-active");
+			document.getElementById("=").classList.remove("button-active");
+			break;
+		case "Backspace":
+			Backspace()
+			// Мой вариант Backspace 
+			//document.getElementById("Backspace").classList.remove("button-active");
 			break;
 	}
 	if (e.key >= 0 && e.key <= 9 || e.key == '.')
 		digit2display(e.key);
+	/*
+	// Мой вариант Backspace
 	if (e.key == "Backspace")
 	{
-
-	}
+		//console.log("----------");
+		let display = document.getElementById("display").value;
+		//console.log(display);
+		if (display.value.length === 1)
+			display.value = "0";
+		else
+		{
+			let text = "";
+			for (let i = 0; i < display.length - 1; i++)
+			{
+				text += display[i];
+				//console.log(i);
+			}
+			document.getElementById("display").value = text;
+			//console.log(text);
+		}
+	}*/
+}
+function Backspace()
+{
+	let display = document.getElementById("display");
+	if (display.value.length === 1)
+		display.value = "0";
+	else
+		display.value = display.value.substring(0, display.value.length - 1);
 }
